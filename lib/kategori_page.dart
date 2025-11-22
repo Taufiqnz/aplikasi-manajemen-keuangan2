@@ -11,7 +11,7 @@ class KategoriPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            // ============== HEADER BALANCE ==============
+
             Container(
               width: double.infinity,
               height: 180,
@@ -59,7 +59,6 @@ class KategoriPage extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // ============== DROPDOWN FILTER ==============
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
@@ -81,7 +80,6 @@ class KategoriPage extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // ============== LIST KATEGORI ==============
             Expanded(
               child: ListView(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -102,7 +100,6 @@ class KategoriPage extends StatelessWidget {
               ),
             ),
 
-            // =============== ADD BUTTON (+) =================
             Padding(
               padding: const EdgeInsets.only(bottom: 20),
               child: GestureDetector(

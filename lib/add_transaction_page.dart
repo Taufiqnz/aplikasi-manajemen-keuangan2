@@ -58,7 +58,6 @@ class _AddTransactionPageState extends State<AddTransactionPage> {
             ),
             const SizedBox(height: 18),
 
-            // ===== INPUT AMOUNT =====
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 20),
               padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -75,52 +74,54 @@ class _AddTransactionPageState extends State<AddTransactionPage> {
                     child: Text(
                       amount,
                       style: const TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.w600),
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                   GestureDetector(
                     onTap: () => setState(() => amount = "0"),
                     child: const Icon(Icons.close),
-                  )
+                  ),
                 ],
               ),
             ),
 
             const SizedBox(height: 18),
 
-            // ===== INCOME / EXPENSE =====
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 GestureDetector(
                   onTap: () => setState(() => isIncome = true),
                   child: Container(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 30,
+                      vertical: 10,
+                    ),
                     decoration: BoxDecoration(
-                      color: isIncome
-                          ? Colors.green[300]
-                          : Colors.grey[300],
+                      color: isIncome ? Colors.green[300] : Colors.grey[300],
                       borderRadius: BorderRadius.circular(14),
                     ),
-                    child: const Text("Income",
-                        style: TextStyle(fontSize: 16)),
+                    child: const Text("Income", style: TextStyle(fontSize: 16)),
                   ),
                 ),
                 const SizedBox(width: 12),
                 GestureDetector(
                   onTap: () => setState(() => isIncome = false),
                   child: Container(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 30,
+                      vertical: 10,
+                    ),
                     decoration: BoxDecoration(
-                      color: !isIncome
-                          ? Colors.red[300]
-                          : Colors.grey[300],
+                      color: !isIncome ? Colors.red[300] : Colors.grey[300],
                       borderRadius: BorderRadius.circular(14),
                     ),
-                    child: const Text("Expense",
-                        style: TextStyle(fontSize: 16)),
+                    child: const Text(
+                      "Expense",
+                      style: TextStyle(fontSize: 16),
+                    ),
                   ),
                 ),
               ],
@@ -128,7 +129,6 @@ class _AddTransactionPageState extends State<AddTransactionPage> {
 
             const SizedBox(height: 20),
 
-            // ===== KEYPAD =====
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(20),
@@ -156,7 +156,7 @@ class _AddTransactionPageState extends State<AddTransactionPage> {
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

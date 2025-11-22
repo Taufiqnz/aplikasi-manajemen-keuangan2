@@ -23,7 +23,6 @@ class HomePage extends StatelessWidget {
       key: _scaffoldKey,
       backgroundColor: Colors.white,
 
-      // ================= SIDEBAR KIRI =================
       drawer: Drawer(
         child: Column(
           children: [
@@ -38,7 +37,6 @@ class HomePage extends StatelessWidget {
         ),
       ),
 
-      // ================= SIDEBAR KANAN =================
       endDrawer: Drawer(
         child: Column(
           children: [
@@ -52,11 +50,9 @@ class HomePage extends StatelessWidget {
         ),
       ),
 
-      // ================= BODY =================
       body: SafeArea(
         child: Column(
           children: [
-            // ================= HEADER =================
             Container(
               width: double.infinity,
               height: 180,
@@ -72,7 +68,6 @@ class HomePage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      // BUKA SIDEBAR KIRI
                       GestureDetector(
                         onTap: () => _scaffoldKey.currentState!.openDrawer(),
                         child: CircleAvatar(
@@ -101,7 +96,6 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
 
-                      // BUKA SIDEBAR KANAN
                       GestureDetector(
                         onTap: () => _scaffoldKey.currentState!.openEndDrawer(),
                         child: CircleAvatar(
@@ -137,7 +131,6 @@ class HomePage extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // ================= BIG CIRCLE =================
             Container(
               width: 140,
               height: 140,
@@ -149,7 +142,6 @@ class HomePage extends StatelessWidget {
 
             const SizedBox(height: 18),
 
-            // ================= ADD BUTTON =================
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 36.0),
               child: SizedBox(
@@ -172,7 +164,6 @@ class HomePage extends StatelessWidget {
 
             const SizedBox(height: 18),
 
-            // ================= CATEGORY LIST =================
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 18.0),
@@ -216,7 +207,6 @@ class HomePage extends StatelessWidget {
   }
 }
 
-// ================= COMPONENT CATEGORY CARD =================
 class CategoryCard extends StatelessWidget {
   final String title;
   final String percent;
@@ -243,7 +233,6 @@ class CategoryCard extends StatelessWidget {
   }
 }
 
-// ================= COMPONENT SIDEBAR BUTTONS =================
 Widget menuButton(String text) {
   return Container(
     margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
